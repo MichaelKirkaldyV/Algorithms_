@@ -25,3 +25,16 @@ a = "abddd"
 b = "adddb"
 print(checkPerm(a, b))
 
+def urlify(str):
+
+    # Strips strings on all tailing and preceding spaces.
+    str.strip(" ")
+
+    # Replaces all other spaces with %20
+    s = str.replace(" ", "%20")
+
+    return s
+
+str_ = "Hello motto "
+print(urlify(str))
+
