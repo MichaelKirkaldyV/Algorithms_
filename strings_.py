@@ -38,3 +38,39 @@ def urlify(str):
 str_ = "Hello motto "
 print(urlify(str))
 
+# For a given sentence, return the average word length. 
+# Note: Remember to remove punctuation first.
+
+def avgWordLength(str):
+    # This sets every index without a punctuation to a space.
+    for i in "!?,.''$":
+        str = str.replace(i, " ")
+
+    # Splits string into a list.
+    str_list = str.split()
+
+    # Generator. Round and return the sum of the length of every word for each word in string list, divided 2.
+    return round(sum(len(word) for word in str_list/len(str_list), 2)
+
+
+
+str_2 = "When are we going to Japan?"
+str_3 = "Hi my name is Imir, May I ask what is yours?"
+print(avgWordLength(str_2))
+print(avgWordLength(str_3))
+
+# Given two non-negative integers num1 and num2 represented as string, return the sum of num1 and num2.
+# You must not use any built-in BigInteger library or convert the inputs to integer directly.
+
+#Notes:
+#Both num1 and num2 contains only digits 0-9.
+#Both num1 and num2 does not contain any leading zero.
+def AddStrings(num1, num2):
+    
+    #eval() adds all the numbers in the int together, then we can add them return them using str() which makes them a string.
+    return str(eval(num1) + eval(num2))
+
+
+num_1 = '678'
+num_2 = '1209'
+print(addString(num_1, num_2))
